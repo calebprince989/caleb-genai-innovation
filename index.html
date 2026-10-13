@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caleb's Generative AI learning and innovation project: an AI Study Material Assistant powered by Retrieval-Augmented Generation (RAG).">
+  <title>Caleb | Generative AI Innovation</title>
+  <style>
+    :root { --navy:#10213d; --blue:#1677ff; --cyan:#52d6e8; --ink:#18243a; --muted:#63718a; --paper:#f5f8fc; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; }
+    .topbar { background:var(--navy); color:#e9f2ff; padding:14px 6%; display:flex; justify-content:space-between; gap:16px; align-items:center; font-size:.92rem; }
+    .brand { font-weight:800; letter-spacing:.3px; }
+    .status { color:#a9f4e3; }
+    header { background:radial-gradient(circle at 80% 20%, #2459a4 0, transparent 35%), linear-gradient(125deg,#10213d,#123e73 70%,#087eaa); color:white; padding:76px 6% 86px; }
+    .hero { max-width:1100px; margin:auto; display:grid; grid-template-columns:1.3fr .7fr; gap:45px; align-items:center; }
+    .eyebrow { display:inline-block; border:1px solid #75c9ee88; background:#ffffff12; padding:7px 13px; border-radius:999px; color:#bcefff; font-size:.85rem; font-weight:700; }
+    h1 { font-size:clamp(2.5rem,6vw,4.5rem); line-height:1.08; margin:22px 0; letter-spacing:-1.8px; }
+    .hero p { color:#e0ebfa; font-size:1.12rem; max-width:650px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-block; padding:12px 19px; border-radius:10px; text-decoration:none; font-weight:750; }
+    .primary { color:#0b2344; background:#fff; }
+    .secondary { color:#fff; border:1px solid #b6d9ff88; }
+    .visual { border:1px solid #ffffff2b; background:#ffffff10; padding:24px; border-radius:22px; box-shadow:0 25px 60px #06152b55; }
+    .visual h3 { margin-top:0; }
+    .flow { display:grid; gap:10px; }
+    .flow div { padding:12px 14px; background:#ffffff12; border:1px solid #ffffff22; border-radius:10px; }
+    .flow span { color:#80e5f2; font-weight:800; margin-right:8px; }
+    main { max-width:1100px; margin:auto; padding:0 6%; }
+    section { padding:58px 0; }
+    .section-tag { color:var(--blue); font-size:.82rem; text-transform:uppercase; font-weight:850; letter-spacing:1.5px; }
+    h2 { font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.2; margin:8px 0 15px; color:var(--navy); }
+    .intro { max-width:760px; color:var(--muted); font-size:1.05rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; }
+    .card { background:white; border:1px solid #e3eaf4; border-radius:16px; padding:23px; box-shadow:0 8px 24px #14284b08; }
+    .icon { font-size:1.7rem; }
+    .card h3 { margin:10px 0 6px; color:var(--navy); }
+    .card p { margin:0; color:var(--muted); }
+    .highlight { background:#eaf4ff; border:1px solid #d5e8ff; border-radius:20px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center; }
+    ul { padding-left:22px; }
+    li { margin:8px 0; }
+    .pill { display:inline-block; padding:6px 10px; margin:5px 5px 0 0; background:#eaf4ff; color:#1759a6; border-radius:7px; font-size:.88rem; font-weight:700; }
+    .note { background:white; border-left:4px solid var(--blue); padding:16px 18px; border-radius:0 10px 10px 0; color:var(--muted); }
+    footer { background:var(--navy); color:#d8e5f7; padding:28px 6%; text-align:center; }
+    footer small { color:#a8bbd5; }
+    @media(max-width:760px) { .hero,.highlight { grid-template-columns:1fr; } .cards { grid-template-columns:1fr; } header { padding-top:52px; } .visual { max-width:520px; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">CALEB · GENAI INNOVATION</div>
+    <div class="status">● Student project · In development</div>
+  </div>
+
+  <header>
+    <div class="hero">
+      <div>
+        <span class="eyebrow">COMPUTER SCIENCE · GENERATIVE AI</span>
+        <h1>Making learning<br>smarter with AI.</h1>
+        <p>I'm Caleb, a Computer Science student exploring Generative AI and building practical tools that help people learn, understand information, and work more effectively.</p>
+        <div class="actions">
+          <a class="btn primary" href="#project">Explore my project ↓</a>
+          <a class="btn secondary" href="#journey">My learning journey</a>
+        </div>
+      </div>
+      <div class="visual">
+        <h3>Featured innovation</h3>
+        <p>AI Study Material Assistant</p>
+        <div class="flow">
+          <div><span>01</span> Add study notes and materials</div>
+          <div><span>02</span> Find relevant information with RAG</div>
+          <div><span>03</span> Ask questions in everyday language</div>
+          <div><span>04</span> Receive a focused, AI-generated explanation</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="project">
+      <div class="section-tag">The project</div>
+      <h2>AI Study Material Assistant</h2>
+      <p class="intro">This learning project explores how Generative AI can help students work with their own notes. The idea is to let a student ask questions about study materials and receive relevant explanations grounded in the information retrieved from those materials.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">📚</div><h3>Study-focused</h3><p>Designed around learning materials, revision notes, and student questions.</p></article>
+        <article class="card"><div class="icon">🔎</div><h3>Retrieval-Augmented Generation</h3><p>Explores retrieving relevant text chunks before generating an answer, helping connect responses to supplied materials.</p></article>
+        <article class="card"><div class="icon">💬</div><h3>Natural-language questions</h3><p>Aims to make it easier to ask questions and get clear explanations without searching through every page manually.</p></article>
+      </div>
+      <div class="note" style="margin-top:22px"><strong>Current status:</strong> This is a student learning prototype under development. Features and results may change as I continue learning and testing.</div>
+    </section>
+
+    <section id="approach">
+      <div class="section-tag">How it works</div>
+      <h2>From notes to useful answers</h2>
+      <div class="highlight">
+        <div>
+          <h3>A simple RAG workflow</h3>
+          <ol>
+            <li>Prepare study content and split it into smaller text chunks.</li>
+            <li>Represent text as embeddings so related content can be compared.</li>
+            <li>Retrieve the chunks most relevant to a student's question.</li>
+            <li>Send the question and retrieved context to a language model to generate an answer.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Technologies I'm learning</h3>
+          <span class="pill">Python</span><span class="pill">Generative AI</span><span class="pill">LLMs</span><span class="pill">Embeddings</span><span class="pill">RAG</span><span class="pill">FastAPI</span><span class="pill">HTML & CSS</span>
+          <p style="color:var(--muted);margin-top:18px">The project is being built step by step as part of my practical IT learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="section-tag">My journey</div>
+      <h2>Learning by building</h2>
+      <p class="intro">I'm developing my skills in AI software development by learning core concepts and applying them to small, practical projects. My goal is to grow from understanding the tools to building useful AI-powered applications.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">🧠</div><h3>Understand</h3><p>Learn how AI, large language models, prompts, embeddings, and RAG fit together.</p></article>
+        <article class="card"><div class="icon">🛠️</div><h3>Build</h3><p>Practise Python, connect AI models, and develop a simple backend and user interface.</p></article>
+        <article class="card"><div class="icon">🚀</div><h3>Improve</h3><p>Test ideas, learn from errors, and improve the project as my knowledge grows.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-tag">Vision</div>
+      <h2>Useful AI, built with purpose</h2>
+      <p class="intro">My long-term aim is to become a Generative AI developer who can design and build practical AI applications that solve real problems, starting with tools that support learning and access to information.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Caleb | Generative AI Innovation</strong><br>
+    <small>Student project · Built for learning and continuous improvement</small>
+  </footer>
+</body>
+</html>
